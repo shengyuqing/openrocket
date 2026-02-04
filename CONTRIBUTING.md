@@ -71,6 +71,8 @@ OpenRocket 软件与终端用户文档站点都是多语言的。译者的工作
 
 如何进行翻译可在[开发者指南](https://openrocket.readthedocs.io/en/latest/dev_guide/contributing_to_translations.html)中找到。
 
+如果你需要翻译文档页面（例如 Getting Started），请先克隆仓库并编辑对应的文档源文件。该页面的源文件位于 `docs/source/setup/getting_started.rst`，修改完成后可按文档构建流程预览并提交。
+
 ## 文档
 我们的文档托管在 [ReadTheDocs](https://openrocket.readthedocs.io/en/latest/index.html)。
 
@@ -151,6 +153,8 @@ You can take a look at example PR [#979](https://github.com/openrocket/openrocke
 Both the OpenRocket software and the end-user documentation site are multilingual. The job of a translator is to maintain the existing languages, or to make a new translation of an unlisted language. During the development sometimes new translation keys get added in the English language that are not simultaneously translated to other languages. The translator must therefore check which translation keys are still missing in his/her/their language.
 
 How you can make/edit a translation can be found in the [Developer's Guide](https://openrocket.readthedocs.io/en/latest/dev_guide/contributing_to_translations.html).
+
+If you need to translate documentation pages (such as Getting Started), clone the repository and edit the corresponding source file. The source file for that page lives at `docs/source/setup/getting_started.rst`. Preview your changes with the documentation build workflow before submitting.
 
 ## Documentation
 Our documentation is hosted on [ReadTheDocs](https://openrocket.readthedocs.io/en/latest/index.html).
