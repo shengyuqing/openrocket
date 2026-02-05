@@ -1,3 +1,86 @@
+# 参与 OpenRocket 贡献 🚀
+嗨，感谢你对 OpenRocket 感兴趣！😊
+
+我将引导你参与 OpenRocket 的贡献，无论是作为开发者、测试者还是任何其他形式的帮助，都能让 OpenRocket 更上一层楼——*玩笑而已*。
+
+在继续之前：时间就是金钱，为节省时间，请习惯将 OpenRocket 简写为 _OR_。
+
+#### 目录
+[测试](#测试)
+* [报告缺陷](#报告缺陷)
+* [提出新功能建议](#提出新功能建议)
+
+[开发](#开发)
+* [提交规范](#提交规范)
+* [拉取请求](#拉取请求)
+
+[翻译](#翻译)
+
+[文档](#文档)
+
+[其他事项](#其他事项)
+
+## 测试
+OpenRocket 并不完美，但我们需要人们去发现并清晰记录所有不完美之处。测试者的工作是发现缺陷、提出新功能需求并测试软件更新。📝
+
+### 报告缺陷
+提交新 issue 时请尽量简洁。给出简短且恰当的标题，最好在开头加入“[Bug]”标签以表明是缺陷。
+
+在描述问题时，以下要素很重要：
+* 说明你期望 OpenRocket 的行为，以及实际行为
+* 详细列出你（重新）复现问题的步骤
+* 提供你的操作系统信息（例如“macOS Monterey version 12.1”）以及你使用的 OpenRocket 版本（例如“最新不稳定分支”）
+* 如适用，请附上 OpenRocket 抛出的异常 Bug Report（最好单独作为 .txt 文件）
+
+提供额外信息（如截图、录屏、触发错误的 .ork 文件等）有助于更快理解并解决问题。
+
+### 提出新功能建议
+如果你希望 OR 增加某项新功能，请为其创建一个新 issue。建议在标题中加入“[Feature Request]”标签。
+
+请详细说明新功能：
+* 你希望 OR 具备哪些新行为
+* 为什么这个新功能重要
+
+## 开发
+请阅读我们的[开发者指南](https://openrocket.readthedocs.io/en/latest/dev_guide/development_overview.html)。如果你仍有关于环境配置、从哪些 issue 开始等问题，请不要犹豫，通过 [Slack](https://join.slack.com/t/openrocket/shared_invite/zt-dh0wtpc4-WmkSK1ysqAOqHa6eFN7zgA) 联系我们。
+
+一开始开发 OpenRocket 可能令人望而生畏，但只要把 Google、IDE 的搜索与调试功能以及其他开发者当作好朋友，你就能轻松创建你的第一个拉取请求。
+
+如果你想处理某个 issue，应先表明你想处理它。可以在 issue 下评论类似“我想处理这个 issue”。这样可确保同一问题不会被多人同时处理。
+
+### 提交规范
+请使用**原子提交（atomic commits）**。意思是：不要把 10 个不同问题的修复塞进一个提交里。应拆分成多个小提交，每个提交只修复一个问题/功能。
+
+例如：你修复了一个按钮显示为红色而非蓝色的问题，同时发现其他地方有个错别字。那就把按钮修复放在一个提交里并取一个合适的名字，把错别字修复放在另一个提交里。原子提交能让代码审查更容易。
+
+提交信息也要**有意义**。一个好的提交命名习惯是：`[#{你要修复的 GitHub issue 编号}] {提交主题}`。
+
+以修复 issue #123 的红色按钮为例：`[#123] Display red button as blue`。提及“#123”也会自动将你的拉取请求链接到对应 issue。提交主题应简短精准。另外，除了提交主题，附上 git 提交信息正文来解释为什么以及如何进行此次提交也非常有用。
+
+### 拉取请求
+很好，你已经深入代码库，找到了那条让你头疼的坏代码并修复了它。现在是时候将代码推送并从你自己的仓库向官方仓库创建一个拉取请求（PR）了。作为 PR 文本，建议使用以下结构：
+
+1. 简要说明你要解决的 issue，例如“此 PR 解决了 #123，其中按钮显示为红色而非蓝色”
+2. 说明根本原因，例如“问题在于 Java Swing 默认将按钮显示为红色”
+3. 说明你如何修复，例如“通过覆盖默认按钮颜色改为蓝色来修复”
+
+你可以参考示例 PR [#979](https://github.com/openrocket/openrocket/pull/979)。
+
+## 翻译
+OpenRocket 软件与终端用户文档站点都是多语言的。译者的工作是维护现有语言，或为未列出的语言新增翻译。在开发过程中，有时会新增英文翻译键，但不会同步翻译到其他语言。因此译者需要检查自己的语言还缺少哪些翻译键。
+
+如何进行翻译可在[开发者指南](https://openrocket.readthedocs.io/en/latest/dev_guide/contributing_to_translations.html)中找到。
+
+如果你需要翻译文档页面（例如 Getting Started），请先克隆仓库并编辑对应的文档源文件。该页面的源文件位于 `docs/source/setup/getting_started.rst`，修改完成后可按文档构建流程预览并提交。
+
+## 文档
+我们的文档托管在 [ReadTheDocs](https://openrocket.readthedocs.io/en/latest/index.html)。
+
+## 其他事项
+如果你有为 OpenRocket 录制教程的好嗓音、作为图形设计师想提升 OR 的设计，或作为销售人员扩大 OR 影响力，那就加入吧！我们非常感谢任何形式的帮助。🙃
+
+---
+
 # Contributing to OpenRocket 🚀
 Hi, thank you for your interest in OpenRocket! 😊
 
@@ -71,9 +154,10 @@ Both the OpenRocket software and the end-user documentation site are multilingua
 
 How you can make/edit a translation can be found in the [Developer's Guide](https://openrocket.readthedocs.io/en/latest/dev_guide/contributing_to_translations.html).
 
+If you need to translate documentation pages (such as Getting Started), clone the repository and edit the corresponding source file. The source file for that page lives at `docs/source/setup/getting_started.rst`. Preview your changes with the documentation build workflow before submitting.
+
 ## Documentation
 Our documentation is hosted on [ReadTheDocs](https://openrocket.readthedocs.io/en/latest/index.html).
 
 ## Anything else
 Do you have the perfect voice for making OpenRocket tutorials, are you a graphical designer that screams to improve OR's design, or are you the salesman that can grow OR's influence? Then go for it! We highly appreciate any help that we get, in any shape or form. 🙃
-
